@@ -22,7 +22,11 @@ export class GroupComponent implements OnInit {
 
   ngOnInit(): void {
     this.data = utils.sheet_to_json<any>(
-      this.dataService.couracup?.Sheets?.[this.sheet]
+      this.dataService.couracup?.Sheets?.[this.sheet],
+      {
+        blankrows: true,
+        defval: '',
+      }
     );
 
     console.log(this.data);
