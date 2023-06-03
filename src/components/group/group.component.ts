@@ -18,11 +18,13 @@ import { utils } from 'xlsx';
 export class GroupComponent implements OnInit {
   private dataService = inject(DataService);
   @Input() sheet: string = '';
+  data: any;
 
   ngOnInit(): void {
-    const data = utils.sheet_to_json<any>(
+    this.data = utils.sheet_to_json<any>(
       this.dataService.couracup?.Sheets?.[this.sheet]
     );
-    console.log(data);
+
+    console.log(this.data);
   }
 }
