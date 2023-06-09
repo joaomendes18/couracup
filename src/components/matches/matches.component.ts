@@ -1,16 +1,6 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import {
-  Component,
-  Input,
-  OnInit,
-  ViewEncapsulation,
-  inject,
-} from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { IMatch } from 'src/interfaces/match.interface';
-import { ITable } from 'src/interfaces/table.interface';
-import { LocalizationPipe } from 'src/pipes/localization.pipe';
-import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-matches',
@@ -28,19 +18,19 @@ export class MatchesComponent implements OnInit {
 
   ngOnInit(): void {
     this.data?.forEach((element, index) => {
-      if (index > 1) {
-        if (element.hasOwnProperty('C')) {
+      if (index > 10) {
+        if (element.hasOwnProperty('A')) {
           this.matches.push({
-            time: element['C'],
-            home: element['D'],
-            homeGoals: element['E'],
-            away: element['H'],
-            awayGoals: element['G'],
+            time: element['A'],
+            home: element['C'],
+            homeGoals: element['D'],
+            away: element['G'],
+            awayGoals: element['F'],
           });
         }
       }
     });
 
-    console.log(this.matches);
+    // console.log(this.matches);
   }
 }

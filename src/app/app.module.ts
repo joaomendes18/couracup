@@ -11,9 +11,9 @@ import { DataService } from 'src/services/data.service';
 
 const routes: Routes = [
   {
-    path: 'u7',
+    path: '1006',
     loadComponent: () =>
-      import('../pages/u7/u7.component').then((mod) => mod.U7Component),
+      import('../pages/10-06/10-06.page').then((mod) => mod.TenOfJunePage),
   },
   {
     path: '**',

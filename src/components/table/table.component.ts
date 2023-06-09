@@ -1,15 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
-import {
-  Component,
-  Input,
-  OnInit,
-  ViewEncapsulation,
-  inject,
-} from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { ITable } from 'src/interfaces/table.interface';
 import { LocalizationPipe } from 'src/pipes/localization.pipe';
-import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-table',
@@ -27,30 +19,29 @@ export class TableComponent implements OnInit {
   @Input() data: any[] | undefined;
 
   ngOnInit(): void {
+    let position = 0;
     this.data?.forEach((element, index) => {
-      if (index > 1) {
-        if (element.hasOwnProperty('A')) {
-          this.teams.push(element['A']);
-        }
+      if (index > 1 && index < 9) {
+        // if (element.hasOwnProperty('A')) {
+        //   this.teams.push(element['A']);
+        // }
 
-        if (element.hasOwnProperty('J')) {
-          this.table.push({
-            position: element['J'],
-            team: element['K'],
-            points: element['L'],
-            played: element['M'],
-            wins: element['N'],
-            draws: element['O'],
-            losses: element['P'],
-            goalsFor: element['Q'],
-            goalsAgainst: element['R'],
-            goalsDifference: element['S'],
-          });
-        }
+        this.table.push({
+          position: ++position,
+          team: element['C'],
+          points: element['D'],
+          played: element['E'],
+          wins: element['F'],
+          draws: element['G'],
+          losses: element['H'],
+          goalsFor: element['I'],
+          goalsAgainst: element['J'],
+          goalsDifference: element['K'],
+        });
       }
     });
 
-    console.log(this.teams);
-    console.log(this.table);
+    // console.log(this.teams);
+    // console.log(this.table);
   }
 }

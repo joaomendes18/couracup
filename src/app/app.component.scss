@@ -1,18 +1,17 @@
 app-root {
-  margin: 1em;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   width: 100%;
-  height: 100%;
   z-index: 1;
-  gap: 1em;
 
   .app-header {
     display: flex;
     width: 100%;
     position: relative;
     align-items: center;
+    margin: 1rem;
+    flex-shrink: 0;
 
     .logo {
       height: 7rem;
@@ -27,12 +26,14 @@ app-root {
       align-items: center;
       padding-left: 5rem;
       padding-right: 2rem;
-      text-overflow: ellipsis;
-      white-space: nowrap;
+      overflow: hidden;
 
       .title {
-        color: #fff;
         font-size: 3rem;
+        font-family: "BrunoAceSC";
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
       }
     }
   }
@@ -41,6 +42,7 @@ app-root {
     display: flex;
     width: 100%;
     height: 100%;
+    overflow-y: auto;
   }
 
   .app-footer {

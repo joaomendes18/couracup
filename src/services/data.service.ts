@@ -11,33 +11,46 @@ export class DataService {
 
   constructor(private http: HttpClient) {}
 
-  async getData() {
+  async getData(): Promise<boolean> {
     try {
+      const traquinas: string =
+        'https://www.googleapis.com/drive/v3/files/12IdGVNgYycEzCASNOmtXp3IMNogm5uN6';
+      //     'https://www.googleapis.com/drive/v3/files/1Lu7d0Z9TQD-13uSU9m58sqskcUE7zPnq'
+
+      // drive
+      const driveFile = await firstValueFrom(
+        this.http.get(traquinas, {
+          params: {
+            key: 'AIzaSyB2fqeKP9BJDn1hkPz5RABEkcgyR_fU7pU',
+            alt: 'media',
+            cache: new Date().getTime(),
+          },
+          responseType: 'blob',
+        })
+      );
+
       // const driveFile = await firstValueFrom(
-      //   this.http.get(
-      //     'https://www.googleapis.com/drive/v3/files/1Lu7d0Z9TQD-13uSU9m58sqskcUE7zPnq',
-      //     {
-      //       params: {
-      //         key: 'AIzaSyBqm0aTm3CZcNmXV3bSH8iIXQX9T4AJSj8',
-      //         alt: 'media',
-      //       },
-      //       responseType: 'blob',
-      //     }
-      //   )
+      //   this.http.get('./assets/u7_u9.xlsm', {
+      //     responseType: 'blob',
+      //   })
       // );
 
-      const arrayBuffer = await (
-        await fetch('assets/traquinas.xlsx')
-      ).arrayBuffer();
+      // if ((driveFile as Blob).size === this.fileSize) {
+      //   return false;
+      // }
 
-      // const arrayBuffer = await (driveFile as Blob).arrayBuffer();
+      const arrayBuffer = await (driveFile as Blob).arrayBuffer();
 
       this.couracup = xlsx.parse(arrayBuffer, {
         rawNumbers: false,
         header: 'A',
+        blankrows: true,
       });
+
+      return true;
     } catch (error) {
       console.log(error);
+      return false;
     }
   }
 }

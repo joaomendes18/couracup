@@ -12,7 +12,7 @@ import { DataService } from 'src/services/data.service';
 export class AppComponent implements OnInit {
   private dataService = inject(DataService);
   private router = inject(Router);
-  title: string = 'U9 - U10 | 10 de Junho';
+  title: string = '10 de Junho';
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
@@ -26,12 +26,23 @@ export class AppComponent implements OnInit {
   ];
 
   async ngOnInit() {
-    // await this.dataService.getData();
+    setInterval(async () => {
+      const result = await this.dataService.getData();
+      if (result) {
+        this.refresh();
+      }
+    }, 180000);
 
-    this.router.navigateByUrl(`u7`);
+    this.router.navigateByUrl(`1006`);
   }
 
   goToHome() {
     this.router.navigateByUrl('/');
+  }
+
+  refresh() {
+    this.router
+      .navigateByUrl('/', { skipLocationChange: true })
+      .then(() => this.router.navigateByUrl(`1006`));
   }
 }

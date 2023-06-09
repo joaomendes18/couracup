@@ -1,17 +1,20 @@
 app-table {
+  display: flex;
+  width: 100%;
   .teams-wrapper {
     display: flex;
     flex-direction: column;
     grid-gap: 0.3rem;
     margin-bottom: 2rem;
+    width: 100%;
     .title {
-      background-color: rgb(255 222 61 / 80%);
+      background-color: rgb(255 222 61 / 90%);
       color: #292f6c;
       text-align: center;
       padding: 0.1rem;
     }
     .content {
-      background-color: rgb(41 47 108 / 80%);
+      background-color: rgb(41 47 108 / 90%);
       text-align: center;
       padding: 0.1rem;
     }
@@ -20,16 +23,16 @@ app-table {
     display: flex;
     flex-direction: column;
     grid-gap: 0.3rem;
-    margin-bottom: 2rem;
+    width: 100%;
     .title {
-      background-color: rgb(255 222 61 / 80%);
+      background-color: rgb(255 222 61 / 90%);
       color: #292f6c;
       text-align: center;
       padding: 0.1rem;
     }
     .table-container {
       display: grid;
-      grid-template-columns: 1.5rem auto repeat(8, 2.3rem);
+      grid-template-columns: 1.5rem minmax(10rem, auto) repeat(8, 2.3rem);
       grid-gap: 0.3rem;
       overflow: hidden;
       .column {
@@ -42,10 +45,11 @@ app-table {
           align-items: center;
           justify-content: center;
           overflow: hidden;
-          background-color: rgb(41 47 108 / 80%);
+          background-color: rgb(41 47 108 / 90%);
           padding: 0.1rem;
           &.team {
             justify-content: flex-start;
+            padding: 0.1rem 0.5rem;
           }
           span {
             white-space: nowrap;
@@ -58,7 +62,7 @@ app-table {
           align-items: center;
           justify-content: center;
           overflow: hidden;
-          background-color: rgb(41 47 108 / 80%);
+          background-color: rgb(41 47 108 / 90%);
           padding: 0.1rem;
           &.team {
             justify-content: flex-start;
