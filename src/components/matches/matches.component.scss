@@ -1,0 +1,46 @@
+app-matches {
+  .table-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.3rem;
+    margin-bottom: 2rem;
+    .title {
+      background-color: rgb(255 222 61 / 80%);
+      color: #292f6c;
+      text-align: center;
+      padding: 0.1rem;
+    }
+    .table-match {
+      display: grid;
+      grid-template-columns: 1fr 6rem 1fr;
+      grid-gap: 0.3rem;
+      overflow: hidden;
+      .cell {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: rgb(41 47 108 / 80%);
+        padding: 0.1rem;
+        &.home {
+          justify-content: flex-end;
+        }
+        &.away {
+          justify-content: flex-start;
+        }
+        &.center {
+          background-color: rgb(255 222 61 / 80%);
+          color: #292f6c;
+          &.result {
+            background-color: white;
+          }
+        }
+        span {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}

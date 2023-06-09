@@ -1,0 +1,58 @@
+app-root {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  gap: 1em;
+
+  .app-header {
+    display: flex;
+    width: 100%;
+    position: relative;
+    align-items: center;
+
+    .logo {
+      height: 7rem;
+      z-index: 1;
+    }
+
+    .title-wrapper {
+      display: flex;
+      height: 5rem;
+      margin-left: -3rem;
+      background-color: #292f6c;
+      align-items: center;
+      padding-left: 5rem;
+      padding-right: 2rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      .title {
+        color: #fff;
+        font-size: 3rem;
+      }
+    }
+  }
+
+  .app-body {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .app-footer {
+    width: 100%;
+    height: 6rem;
+    flex-shrink: 0;
+
+    owl-carousel-o {
+      img {
+        height: 6rem;
+        object-fit: contain;
+      }
+    }
+  }
+}

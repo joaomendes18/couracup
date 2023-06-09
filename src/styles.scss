@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+
+@font-face {
+  font-family: "BrunoAceSC";
+  src: url("./assets/fonts/BrunoAceSC-Regular.ttf");
+}
+
+body,
+html {
+  margin: 0;
+  background-color: #525252;
+  font-family: "BrunoAceSC";
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  font-size: 12px;
+  color: #fff;
+}
+
+body {
+  &::before {
+    content: "";
+    background-image: url("./assets/images/fundo.jpeg");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    opacity: 0.5;
+    filter: blur(2px);
+    z-index: 0;
+  }
+}

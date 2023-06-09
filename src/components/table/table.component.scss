@@ -1,0 +1,75 @@
+app-table {
+  .teams-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.3rem;
+    margin-bottom: 2rem;
+    .title {
+      background-color: rgb(255 222 61 / 80%);
+      color: #292f6c;
+      text-align: center;
+      padding: 0.1rem;
+    }
+    .content {
+      background-color: rgb(41 47 108 / 80%);
+      text-align: center;
+      padding: 0.1rem;
+    }
+  }
+  .table-wrapper {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0.3rem;
+    margin-bottom: 2rem;
+    .title {
+      background-color: rgb(255 222 61 / 80%);
+      color: #292f6c;
+      text-align: center;
+      padding: 0.1rem;
+    }
+    .table-container {
+      display: grid;
+      grid-template-columns: 1.5rem auto repeat(8, 2.3rem);
+      grid-gap: 0.3rem;
+      overflow: hidden;
+      .column {
+        display: grid;
+        grid-auto-rows: auto;
+        grid-gap: 0.3rem;
+        overflow: hidden;
+        .header {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          background-color: rgb(41 47 108 / 80%);
+          padding: 0.1rem;
+          &.team {
+            justify-content: flex-start;
+          }
+          span {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+        .cell {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          overflow: hidden;
+          background-color: rgb(41 47 108 / 80%);
+          padding: 0.1rem;
+          &.team {
+            justify-content: flex-start;
+          }
+          span {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}

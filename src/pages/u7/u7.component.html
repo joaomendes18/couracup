@@ -1,1 +1,2 @@
-<app-group [sheet]="'Grupos'"/>
+<app-table *ngIf="data" [data]="data" />
+<app-matches *ngIf="data" [data]="data" />

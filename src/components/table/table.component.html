@@ -1,1 +1,17 @@
-
+<div *ngIf="false && teams?.length" class="teams-wrapper">
+  <div class="title">Equipas</div>
+  <div class="content" *ngFor="let team of teams">{{ team }}</div>
+</div>
+<div class="table-wrapper" *ngIf="table?.length">
+  <div class="title">Classificação</div>
+  <div class="table-container">
+    <div class="column" *ngFor="let item of Object.keys(table[0])">
+      <div class="header {{ item }}">
+        <span>{{ item | localization }}</span>
+      </div>
+      <div class="cell {{ item }}" *ngFor="let value of table">
+        <span>{{ $any(value)[item] }}</span>
+      </div>
+    </div>
+  </div>
+</div>

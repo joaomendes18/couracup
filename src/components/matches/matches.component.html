@@ -1,0 +1,22 @@
+<div class="table-wrapper" *ngIf="matches?.length">
+  <div class="title">Jogos</div>
+  <div class="table-match" *ngFor="let value of matches">
+    <div class="cell home">
+      <span>{{ value.home }}</span>
+    </div>
+    <div
+      class="cell center"
+      [ngClass]="{ result: value.homeGoals && value.awayGoals }"
+    >
+      <span *ngIf="value.homeGoals && value.awayGoals"
+        >{{ value.homeGoals }} x {{ value.awayGoals }}</span
+      >
+      <span *ngIf="!(value.homeGoals && value.awayGoals)">{{
+        value.time
+      }}</span>
+    </div>
+    <div class="cell away">
+      <span>{{ value.away }}</span>
+    </div>
+  </div>
+</div>
