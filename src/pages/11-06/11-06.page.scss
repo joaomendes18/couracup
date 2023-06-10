@@ -1,0 +1,39 @@
+page-11-06 {
+  display: flex;
+  padding: 1rem;
+  padding-top: 0;
+  gap: 2rem;
+  flex: 1;
+  justify-content: center;
+
+  .u-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .u-title {
+      background-color: #fff;
+      color: #292f6c;
+      text-align: center;
+      padding: 0.2rem;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+
+    .u-groups-wrapper {
+      display: flex;
+      gap: 1rem;
+      .u-group-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .u-group-title {
+          background-color: rgb(41 47 108 / 90%);
+          text-align: center;
+          padding: 0.2rem;
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
