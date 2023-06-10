@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
       if (result) {
         this.refresh();
       }
-    }, 180000);
+    }, 60000);
 
     this.router.navigateByUrl(`1006`);
   }
