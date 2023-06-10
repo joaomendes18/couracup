@@ -19,6 +19,10 @@ const routes: Routes = [
     path: '**',
     redirectTo: '/',
   },
+  {
+    path: 'couracup/**',
+    redirectTo: '/',
+  },
 ];
 
 function initializeAppFactory(dataService: DataService): () => void {

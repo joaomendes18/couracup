@@ -13,27 +13,29 @@ export class DataService {
 
   async getData(): Promise<boolean> {
     try {
-      const traquinas: string =
-        'https://www.googleapis.com/drive/v3/files/12IdGVNgYycEzCASNOmtXp3IMNogm5uN6';
-      //     'https://www.googleapis.com/drive/v3/files/1Lu7d0Z9TQD-13uSU9m58sqskcUE7zPnq'
+      // const traquinas: string =
+      //   'https://www.googleapis.com/drive/v3/files/12IdGVNgYycEzCASNOmtXp3IMNogm5uN6';
 
-      // drive
+      // // drive
+      // const driveFile = await firstValueFrom(
+      //   this.http.get(traquinas, {
+      //     params: {
+      //       key: 'AIzaSyB2fqeKP9BJDn1hkPz5RABEkcgyR_fU7pU',
+      //       alt: 'media',
+      //       cache: new Date().getTime(),
+      //     },
+      //     responseType: 'blob',
+      //   })
+      // );
+
       const driveFile = await firstValueFrom(
-        this.http.get(traquinas, {
+        this.http.get('./assets/files/u7_u9.xlsm', {
           params: {
-            key: 'AIzaSyB2fqeKP9BJDn1hkPz5RABEkcgyR_fU7pU',
-            alt: 'media',
             cache: new Date().getTime(),
           },
           responseType: 'blob',
         })
       );
-
-      // const driveFile = await firstValueFrom(
-      //   this.http.get('./assets/u7_u9.xlsm', {
-      //     responseType: 'blob',
-      //   })
-      // );
 
       // if ((driveFile as Blob).size === this.fileSize) {
       //   return false;
