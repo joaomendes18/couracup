@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href /couracup/",
+    "build": "ng build",
+    "build git": "ng build --base-href /couracup/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
