@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
       }
     }, 60000);
 
-    this.router.navigateByUrl(`1006`);
+    this.router.navigateByUrl(`1106`);
   }
 
   goToHome() {
@@ -31,6 +31,6 @@ export class AppComponent implements OnInit {
   refresh() {
     this.router
       .navigateByUrl('/', { skipLocationChange: true })
-      .then(() => this.router.navigateByUrl(`1006`));
+      .then(() => this.router.navigateByUrl(`1106`));
   }
 }

@@ -21,7 +21,7 @@ export class TableComponent implements OnInit {
   ngOnInit(): void {
     let position = 0;
     this.data?.forEach((element, index) => {
-      if (index > 1 && index < 9) {
+      if (index > 1 && index < 7) {
         // if (element.hasOwnProperty('A')) {
         //   this.teams.push(element['A']);
         // }

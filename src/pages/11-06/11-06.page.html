@@ -1,27 +1,31 @@
 <div class="u-wrapper">
-  <div class="u-title">U7</div>
+  <div class="u-title">JOGOS</div>
   <div class="u-groups-wrapper">
     <div class="u-group-wrapper">
-      <div class="u-group-title">Grupo A</div>
-      <app-group [sheet]="'U7_GA'" />
+      <div class="u-group-title">CAMPO 1</div>
+      <app-matches [data]="campo1"></app-matches>
     </div>
     <div class="u-group-wrapper">
-      <div class="u-group-title">Grupo B</div>
-      <app-group [sheet]="'U7_GB'" />
+      <div class="u-group-title">CAMPO 2</div>
+      <app-matches [data]="campo2"></app-matches>
     </div>
   </div>
 </div>
 
 <div class="u-wrapper">
-  <div class="u-title">U9</div>
-  <div class="u-groups-wrapper">
-    <div class="u-group-wrapper">
-      <div class="u-group-title">Grupo A</div>
-      <app-group [sheet]="'U9_GA'" />
+  <div class="u-title">CLASSIFICAÇÃO</div>
+  <div class="u-tables-wrapper">
+    <div class="u-table-wrapper">
+      <div class="u-table-title">GRUPO1</div>
+      <app-table [data]="grupo1" />
     </div>
-    <div class="u-group-wrapper">
-      <div class="u-group-title">Grupo B</div>
-      <app-group [sheet]="'U9_GB'" />
+    <div class="u-table-wrapper">
+      <div class="u-table-title">GRUPO2</div>
+      <app-table [data]="grupo2" />
+    </div>
+    <div class="u-table-wrapper">
+      <div class="u-table-title">GRUPO3</div>
+      <app-table [data]="grupo3" />
     </div>
   </div>
 </div>

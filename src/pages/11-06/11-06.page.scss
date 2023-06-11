@@ -35,5 +35,23 @@ page-11-06 {
         }
       }
     }
+
+    .u-tables-wrapper {
+      display: flex;
+      gap: 1rem;
+      flex-direction: column;
+      .u-table-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .u-table-title {
+          background-color: rgb(255 222 61 / 90%);
+          color: #292f6c;
+          text-align: center;
+          padding: 0.2rem;
+          font-size: 1.1rem;
+        }
+      }
+    }
   }
 }

@@ -18,19 +18,17 @@ export class MatchesComponent implements OnInit {
 
   ngOnInit(): void {
     this.data?.forEach((element, index) => {
-      if (index > 10) {
-        if (element.hasOwnProperty('A')) {
-          this.matches.push({
-            time: element['A'],
-            home: element['C'],
-            homeGoals: element['D'],
-            away: element['G'],
-            awayGoals: element['F'],
-          });
-        }
+      if (element.hasOwnProperty('A')) {
+        this.matches.push({
+          time: element['A'],
+          home: element['C'],
+          homeGoals: element['D'],
+          away: element['G'],
+          awayGoals: element['F'],
+        });
       }
     });
 
-    // console.log(this.matches);
+    console.log(this.matches);
   }
 }
