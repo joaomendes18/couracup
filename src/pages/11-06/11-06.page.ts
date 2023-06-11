@@ -23,9 +23,15 @@ export class ElevenOfJunePage implements OnInit {
 
   protected campo1: any[] | undefined;
   protected campo2: any[] | undefined;
-  protected grupo1: any[] | undefined;
-  protected grupo2: any[] | undefined;
-  protected grupo3: any[] | undefined;
+  protected quartos1: any[] = [];
+  protected quartos2: any[] = [];
+  protected meias1: any[] = [];
+  protected meias2: any[] = [];
+  protected final: any[] = [];
+  protected terceiros: any[] = [];
+  protected grupo1: any[] = [];
+  protected grupo2: any[] = [];
+  protected grupo3: any[] = [];
 
   ngOnInit(): void {
     const resultados: any[] = this.dataService?.couracup?.find(
@@ -36,7 +42,6 @@ export class ElevenOfJunePage implements OnInit {
       console.log('Erro!!!');
       return;
     }
-    console.log(resultados);
 
     this.campo1 = resultados.splice(0, 15);
     this.campo2 = resultados.splice(1, 15);
@@ -52,6 +57,21 @@ export class ElevenOfJunePage implements OnInit {
     this.grupo3 = this.dataService?.couracup?.find(
       (d) => d.name === 'U10_C'
     )?.data;
+
+    const final = this.dataService?.couracup?.find(
+      (d) => d.name === 'final'
+    )?.data;
+
+    this.quartos1?.push(final[0], final[2]);
+    this.quartos2?.push(final[1], final[3]);
+
+    this.meias1?.push(final[4]);
+    this.meias2?.push(final[5]);
+
+    this.terceiros?.push(final[6]);
+
+    this.final?.push(final[7]);
+    console.log(final);
 
     // console.log(this.data);
   }

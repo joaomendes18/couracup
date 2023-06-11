@@ -4,12 +4,18 @@
     <div class="u-group-wrapper">
       <div class="u-group-title">CAMPO 1</div>
       <app-matches [data]="campo1"></app-matches>
+      <app-matches [data]="quartos1" [title]="'QUARTOS DE FINAL'"></app-matches>
+      <app-matches [data]="meias1" [title]="'MEIAS FINAIS'"></app-matches>
     </div>
     <div class="u-group-wrapper">
       <div class="u-group-title">CAMPO 2</div>
       <app-matches [data]="campo2"></app-matches>
+      <app-matches [data]="quartos2" [title]="'QUARTOS DE FINAL'"></app-matches>
+      <app-matches [data]="meias2" [title]="'MEIAS FINAIS'"></app-matches>
     </div>
   </div>
+  <app-matches [data]="terceiros" [title]="'TERCEIROS/QUARTOS'"></app-matches>
+  <app-matches [data]="final" [title]="'FINAL'"></app-matches>
 </div>
 
 <div class="u-wrapper">

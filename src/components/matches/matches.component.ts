@@ -15,6 +15,7 @@ export class MatchesComponent implements OnInit {
   protected Object = Object;
 
   @Input() data: any[] | undefined;
+  @Input() title: string = 'Jogos';
 
   ngOnInit(): void {
     this.data?.forEach((element, index) => {
@@ -29,6 +30,6 @@ export class MatchesComponent implements OnInit {
       }
     });
 
-    console.log(this.matches);
+    // console.log(this.matches);
   }
 }

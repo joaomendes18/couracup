@@ -11,7 +11,7 @@ import { DataService } from 'src/services/data.service';
 export class AppComponent implements OnInit {
   private dataService = inject(DataService);
   private router = inject(Router);
-  title: string = '10 de Junho';
+  title: string = '11 de Junho';
 
   async ngOnInit() {
     setInterval(async () => {
