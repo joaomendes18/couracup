@@ -71,7 +71,6 @@ export class ElevenOfJunePage implements OnInit {
     this.terceiros?.push(final[6]);
 
     this.final?.push(final[7]);
-    console.log(final);
 
     // console.log(this.data);
   }

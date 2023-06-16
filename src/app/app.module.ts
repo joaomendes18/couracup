@@ -21,6 +21,13 @@ const routes: Routes = [
       import('../pages/11-06/11-06.page').then((mod) => mod.ElevenOfJunePage),
   },
   {
+    path: '1706',
+    loadComponent: () =>
+      import('../pages/17-06/17-06.page').then(
+        (mod) => mod.SeventeenOfJunePage
+      ),
+  },
+  {
     path: '**',
     redirectTo: '/',
   },

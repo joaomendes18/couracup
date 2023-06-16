@@ -11,17 +11,17 @@ import { DataService } from 'src/services/data.service';
 export class AppComponent implements OnInit {
   private dataService = inject(DataService);
   private router = inject(Router);
-  title: string = '11 de Junho';
+  title: string = '17 e 18 de Junho';
 
   async ngOnInit() {
     setInterval(async () => {
       const result = await this.dataService.getData();
       if (result) {
-        this.refresh();
+        // this.refresh();
       }
     }, 60000);
 
-    this.router.navigateByUrl(`1106`);
+    this.router.navigateByUrl(`1706`);
   }
 
   goToHome() {
@@ -31,6 +31,6 @@ export class AppComponent implements OnInit {
   refresh() {
     this.router
       .navigateByUrl('/', { skipLocationChange: true })
-      .then(() => this.router.navigateByUrl(`1106`));
+      .then(() => this.router.navigateByUrl(`1706`));
   }
 }

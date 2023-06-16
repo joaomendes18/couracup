@@ -50,14 +50,14 @@ app-root {
 
   .app-footer {
     width: 100%;
-    height: 6rem;
+    // height: 8rem;
     flex-shrink: 0;
 
-    owl-carousel-o {
-      img {
-        height: 6rem;
-        object-fit: contain;
-      }
-    }
+    // owl-carousel-o {
+    //   img {
+    //     height: 6rem;
+    //     object-fit: contain;
+    //   }
+    // }
   }
 }

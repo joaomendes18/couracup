@@ -21,24 +21,22 @@ export class TableComponent implements OnInit {
   ngOnInit(): void {
     let position = 0;
     this.data?.forEach((element, index) => {
-      if (index > 1 && index < 7) {
-        // if (element.hasOwnProperty('A')) {
-        //   this.teams.push(element['A']);
-        // }
+      // if (element.hasOwnProperty('A')) {
+      //   this.teams.push(element['A']);
+      // }
 
-        this.table.push({
-          position: ++position,
-          team: element['C'],
-          points: element['D'],
-          played: element['E'],
-          wins: element['F'],
-          draws: element['G'],
-          losses: element['H'],
-          goalsFor: element['I'],
-          goalsAgainst: element['J'],
-          goalsDifference: element['K'],
-        });
-      }
+      this.table.push({
+        position: ++position,
+        team: element['C'],
+        points: element['D'],
+        played: element['E'],
+        wins: element['F'],
+        draws: element['G'],
+        losses: element['H'],
+        goalsFor: element['I'],
+        goalsAgainst: element['J'],
+        goalsDifference: element['K'],
+      });
     });
 
     // console.log(this.teams);

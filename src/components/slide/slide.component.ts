@@ -16,10 +16,13 @@ export class SlideComponent {
     autoplay: true,
     autoHeight: true,
     autoWidth: true,
+    margin: 4,
+    autoplaySpeed: 2,
+    autoplayTimeout: 1000,
+    mouseDrag: false,
+    touchDrag: false,
+    pullDrag: false,
+    dots: false,
+    navSpeed: 700,
   };
-  protected slidesStore: any = [
-    'assets/images/slide/arcobarca.jpg',
-    'assets/images/slide/courafit.jpg',
-    'assets/images/slide/cozinhasbold.png',
-  ];
 }
