@@ -6,14 +6,14 @@ import { DataService } from 'src/services/data.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'page-U13',
-  templateUrl: './U13.page.html',
-  styleUrls: ['./U13.page.scss'],
+  selector: 'page-U13-17-06',
+  templateUrl: './U13-17-06.page.html',
+  styleUrls: ['./U13-17-06.page.scss'],
   encapsulation: ViewEncapsulation.None,
   standalone: true,
   imports: [MatchesComponent, TableComponent, NgIf, AsyncPipe],
 })
-export class U13Page implements OnInit {
+export class U13Of1706Page implements OnInit {
   private dataService = inject(DataService);
 
   protected campo1: any[] | undefined;
@@ -52,8 +52,6 @@ export class U13Page implements OnInit {
     this.grupo2 = data?.find((d) => d.name === 'U13_B')?.data.slice(2, 6);
     this.grupo3 = data?.find((d) => d.name === 'U13_C')?.data.slice(2, 6);
     this.grupo4 = data?.find((d) => d.name === 'U13_D')?.data.slice(2, 6);
-
-    console.log(this.campo1);
 
     this.ready$.next(true);
   }
