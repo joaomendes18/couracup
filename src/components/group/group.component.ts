@@ -26,9 +26,9 @@ export class GroupComponent implements OnInit {
   @Input() sheet: string = '';
 
   ngOnInit(): void {
-    this.data = this.dataService?.couracup?.find(
-      (d) => d.name === this.sheet
-    )?.data;
+    // this.data = this.dataService?.couracup?.find(
+    //   (d) => d.name === this.sheet
+    // )?.data;
 
     if (!this.data) {
       console.log('Erro!!!');

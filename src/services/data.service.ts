@@ -1,39 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import xlsx from 'node-xlsx';
 import { firstValueFrom } from 'rxjs';
+import xlsx from 'node-xlsx';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DataService {
-  couracup: any[] = [];
-
   constructor(private http: HttpClient) {}
 
-  async getData(): Promise<boolean> {
+  async getData(uri: string): Promise<any[]> {
     try {
-      // const traquinas: string =
-      //   'https://www.googleapis.com/drive/v3/files/12IdGVNgYycEzCASNOmtXp3IMNogm5uN6';
-
-      // // drive
-      // const driveFile = await firstValueFrom(
-      //   this.http.get(traquinas, {
-      //     params: {
-      //       key: 'AIzaSyB2fqeKP9BJDn1hkPz5RABEkcgyR_fU7pU',
-      //       alt: 'media',
-      //       cache: new Date().getTime(),
-      //     },
-      //     responseType: 'blob',
-      //   })
-      // );
-
-      const u7_u9 = './assets/files/u7_u9.xlsm';
-      const u10 = './assets/files/u10.xlsm';
-      const u13 = './assets/files/u13.xlsm';
-
       const driveFile = await firstValueFrom(
-        this.http.get(u13, {
+        this.http.get(uri, {
           params: {
             cache: new Date().getTime(),
           },
@@ -41,22 +20,17 @@ export class DataService {
         })
       );
 
-      // if ((driveFile as Blob).size === this.fileSize) {
-      //   return false;
-      // }
-
       const arrayBuffer = await (driveFile as Blob).arrayBuffer();
-
-      this.couracup = xlsx.parse(arrayBuffer, {
+      const data = xlsx.parse(arrayBuffer, {
         rawNumbers: false,
         header: 'A',
         blankrows: true,
       });
 
-      return true;
+      return data;
     } catch (error) {
       console.log(error);
-      return false;
+      return [];
     }
   }
 }

@@ -34,44 +34,33 @@ export class ElevenOfJunePage implements OnInit {
   protected grupo3: any[] = [];
 
   ngOnInit(): void {
-    const resultados: any[] = this.dataService?.couracup?.find(
-      (d) => d.name === 'Resultados'
-    )?.data;
-
-    if (!resultados) {
-      console.log('Erro!!!');
-      return;
-    }
-
-    this.campo1 = resultados.splice(0, 15);
-    this.campo2 = resultados.splice(1, 15);
-
-    this.grupo1 = this.dataService?.couracup?.find(
-      (d) => d.name === 'U10_A'
-    )?.data;
-
-    this.grupo2 = this.dataService?.couracup?.find(
-      (d) => d.name === 'U10_B'
-    )?.data;
-
-    this.grupo3 = this.dataService?.couracup?.find(
-      (d) => d.name === 'U10_C'
-    )?.data;
-
-    const final = this.dataService?.couracup?.find(
-      (d) => d.name === 'final'
-    )?.data;
-
-    this.quartos1?.push(final[0], final[2]);
-    this.quartos2?.push(final[1], final[3]);
-
-    this.meias1?.push(final[4]);
-    this.meias2?.push(final[5]);
-
-    this.terceiros?.push(final[6]);
-
-    this.final?.push(final[7]);
-
+    // const resultados: any[] = this.dataService?.couracup?.find(
+    //   (d) => d.name === 'Resultados'
+    // )?.data;
+    // if (!resultados) {
+    //   console.log('Erro!!!');
+    //   return;
+    // }
+    // this.campo1 = resultados.splice(0, 15);
+    // this.campo2 = resultados.splice(1, 15);
+    // this.grupo1 = this.dataService?.couracup?.find(
+    //   (d) => d.name === 'U10_A'
+    // )?.data;
+    // this.grupo2 = this.dataService?.couracup?.find(
+    //   (d) => d.name === 'U10_B'
+    // )?.data;
+    // this.grupo3 = this.dataService?.couracup?.find(
+    //   (d) => d.name === 'U10_C'
+    // )?.data;
+    // const final = this.dataService?.couracup?.find(
+    //   (d) => d.name === 'final'
+    // )?.data;
+    // this.quartos1?.push(final[0], final[2]);
+    // this.quartos2?.push(final[1], final[3]);
+    // this.meias1?.push(final[4]);
+    // this.meias2?.push(final[5]);
+    // this.terceiros?.push(final[6]);
+    // this.final?.push(final[7]);
     // console.log(this.data);
   }
 }

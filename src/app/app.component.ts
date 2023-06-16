@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataService } from 'src/services/data.service';
 
 @Component({
   selector: 'app-root',
@@ -9,28 +8,14 @@ import { DataService } from 'src/services/data.service';
   encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent implements OnInit {
-  private dataService = inject(DataService);
   private router = inject(Router);
-  title: string = '17 e 18 de Junho';
+  title: string = '17 de Junho';
 
   async ngOnInit() {
-    setInterval(async () => {
-      const result = await this.dataService.getData();
-      if (result) {
-        // this.refresh();
-      }
-    }, 60000);
-
     this.router.navigateByUrl(`1706`);
   }
 
   goToHome() {
     this.router.navigateByUrl('/');
-  }
-
-  refresh() {
-    this.router
-      .navigateByUrl('/', { skipLocationChange: true })
-      .then(() => this.router.navigateByUrl(`1706`));
   }
 }

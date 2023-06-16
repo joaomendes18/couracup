@@ -16,13 +16,9 @@ export class SlideComponent {
     autoplay: true,
     autoHeight: true,
     autoWidth: true,
-    margin: 4,
-    autoplaySpeed: 2,
+    margin: 12,
     autoplayTimeout: 1000,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
     dots: false,
-    navSpeed: 700,
+    autoplayHoverPause: false,
   };
 }

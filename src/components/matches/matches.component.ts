@@ -1,5 +1,11 @@
 import { NgClass, NgFor, NgIf } from '@angular/common';
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  Input,
+  OnChanges,
+  SimpleChanges,
+  ViewEncapsulation,
+} from '@angular/core';
 import { IMatch } from 'src/interfaces/match.interface';
 
 @Component({
@@ -10,15 +16,22 @@ import { IMatch } from 'src/interfaces/match.interface';
   standalone: true,
   imports: [NgFor, NgIf, NgClass],
 })
-export class MatchesComponent implements OnInit {
+export class MatchesComponent implements OnChanges {
   protected matches: IMatch[] = [];
   protected Object = Object;
 
   @Input() data: any[] | undefined;
   @Input() title: string = 'Jogos';
 
-  ngOnInit(): void {
-    this.data?.forEach((element, index) => {
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['data']) {
+      this.setData();
+    }
+  }
+
+  private setData() {
+    this.matches = [];
+    this.data?.forEach((element) => {
       if (element.hasOwnProperty('A')) {
         this.matches.push({
           time: element['A'],
@@ -29,7 +42,5 @@ export class MatchesComponent implements OnInit {
         });
       }
     });
-
-    // console.log(this.matches);
   }
 }
