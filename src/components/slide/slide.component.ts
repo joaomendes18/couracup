@@ -20,5 +20,7 @@ export class SlideComponent {
     autoplayTimeout: 1000,
     dots: false,
     autoplayHoverPause: false,
+    slideTransition: 'linear',
+    autoplaySpeed: 600,
   };
 }
