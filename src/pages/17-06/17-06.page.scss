@@ -1,5 +1,8 @@
 page-17-06 {
-  display: flex;
+  display: grid;
   flex: 1;
+  padding: 1rem;
+  gap: 3rem;
   justify-content: center;
+  grid-template-columns: 1fr 1fr;
 }

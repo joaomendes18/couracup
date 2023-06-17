@@ -1,4 +1,4 @@
-page-U13-17-06 {
+page-U11-17-06 {
   display: grid;
   padding-top: 0;
   gap: 1rem;
@@ -7,39 +7,39 @@ page-U13-17-06 {
     "campo1 campo2"
     "classificacao classificacao"
     "grupo1 grupo2"
-    "grupo3 grupo4";
+    "grupo3 grupo4"
+    "grupo5 grupo6";
   grid-auto-rows: max-content;
   grid-template-columns: 1fr 1fr;
   .jogos {
     grid-area: jogos;
   }
-
   .campo1 {
     grid-area: campo1;
   }
-
   .campo2 {
     grid-area: campo2;
   }
-
   .classificacao {
     grid-area: classificacao;
   }
-
   .grupo1 {
     grid-area: grupo1;
   }
-
   .grupo2 {
     grid-area: grupo2;
   }
-
   .grupo3 {
     grid-area: grupo3;
   }
-
   .grupo4 {
     grid-area: grupo4;
+  }
+  .grupo5 {
+    grid-area: grupo5;
+  }
+  .grupo6 {
+    grid-area: grupo6;
   }
 
   .u-title {
