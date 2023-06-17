@@ -1,0 +1,45 @@
+<ng-container *ngIf="ready$ | async"
+  ><div class="u-title jogos17">JOGOS 17 DE JUNHO</div>
+  <div class="u-title jogos18">JOGOS 18 DE JUNHO</div>
+  <div class="u-group-wrapper campo1-17">
+    <div class="u-group-title">CAMPO 1</div>
+    <app-matches [data]="campo117"></app-matches>
+  </div>
+  <div class="u-group-wrapper campo2-17">
+    <div class="u-group-title">CAMPO 2</div>
+    <app-matches [data]="campo217"></app-matches>
+  </div>
+  <div class="u-group-wrapper campo1-18">
+    <div class="u-group-title">CAMPO 1</div>
+    <app-matches [data]="campo118"></app-matches>
+  </div>
+  <div class="u-group-wrapper campo2-18">
+    <div class="u-group-title">CAMPO 2</div>
+    <app-matches [data]="campo218"></app-matches>
+  </div>
+  <div class="u-title classificacao">CLASSIFICAÇÃO</div>
+  <div class="u-table-wrapper grupo1">
+    <div class="u-table-title">GRUPO A</div>
+    <app-table [data]="grupo1" />
+  </div>
+  <div class="u-table-wrapper grupo2">
+    <div class="u-table-title">GRUPO B</div>
+    <app-table [data]="grupo2" />
+  </div>
+  <div class="u-table-wrapper grupo3">
+    <div class="u-table-title">GRUPO C</div>
+    <app-table [data]="grupo3" />
+  </div>
+  <div class="u-table-wrapper grupo4">
+    <div class="u-table-title">GRUPO D</div>
+    <app-table [data]="grupo4" />
+  </div>
+  <div class="u-table-wrapper grupo5">
+    <div class="u-table-title">GRUPO E</div>
+    <app-table [data]="grupo5" />
+  </div>
+  <div class="u-table-wrapper grupo6">
+    <div class="u-table-title">GRUPO F</div>
+    <app-table [data]="grupo6" />
+  </div>
+</ng-container>

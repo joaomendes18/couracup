@@ -1,0 +1,88 @@
+page-U11-17-18-06 {
+  display: grid;
+  padding-top: 0;
+  gap: 1rem;
+  grid-template-areas:
+    "classificacao classificacao"
+    "grupo1 grupo2"
+    "grupo3 grupo4"
+    "grupo5 grupo6"
+    "jogos17 jogos17"
+    "campo1-17 campo2-17"
+    "jogos18 jogos18"
+    "campo1-18 campo2-18";
+  grid-auto-rows: max-content;
+  grid-template-columns: 1fr 1fr;
+  .jogos17 {
+    grid-area: jogos17;
+  }
+  .jogos18 {
+    grid-area: jogos18;
+  }
+  .campo1 {
+    grid-area: campo1;
+  }
+  .campo2 {
+    grid-area: campo2;
+  }
+  .classificacao {
+    grid-area: classificacao;
+  }
+  .grupo1 {
+    grid-area: grupo1;
+  }
+  .grupo2 {
+    grid-area: grupo2;
+  }
+  .grupo3 {
+    grid-area: grupo3;
+  }
+  .grupo4 {
+    grid-area: grupo4;
+  }
+  .grupo5 {
+    grid-area: grupo5;
+  }
+  .grupo6 {
+    grid-area: grupo6;
+  }
+
+  .u-title {
+    background-color: #fff;
+    color: #292f6c;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .u-group-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .u-group-title {
+      background-color: rgb(41 47 108 / 90%);
+      text-align: center;
+      padding: 0.2rem;
+      font-size: 1.1rem;
+    }
+  }
+  .u-group-title-final {
+    background-color: rgb(41 47 108 / 90%);
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+  }
+  .u-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .u-table-title {
+      background-color: rgb(255 222 61 / 90%);
+      color: #292f6c;
+      text-align: center;
+      padding: 0.2rem;
+      font-size: 1.1rem;
+    }
+  }
+}
