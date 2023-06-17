@@ -17,10 +17,14 @@ export class SlideComponent {
     autoHeight: true,
     autoWidth: true,
     margin: 12,
-    autoplayTimeout: 1000,
+    autoplayTimeout: 5000,
     dots: false,
     autoplayHoverPause: false,
     slideTransition: 'linear',
     autoplaySpeed: 800,
+    freeDrag: false,
+    mouseDrag: false,
+    touchDrag: false,
+    lazyLoad: true,
   };
 }
