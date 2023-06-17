@@ -21,6 +21,6 @@ export class SlideComponent {
     dots: false,
     autoplayHoverPause: false,
     slideTransition: 'linear',
-    autoplaySpeed: 600,
+    autoplaySpeed: 800,
   };
 }
