@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
   title: string = '17 de Junho';
 
   async ngOnInit() {
-    this.router.navigateByUrl(`171806`);
+    this.router.navigateByUrl(`1806`);
   }
 
   goToHome() {

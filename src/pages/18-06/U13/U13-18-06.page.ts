@@ -6,14 +6,14 @@ import { DataService } from 'src/services/data.service';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-  selector: 'page-U13-17-06',
-  templateUrl: './U13-17-06.page.html',
-  styleUrls: ['./U13-17-06.page.scss'],
+  selector: 'page-U13-18-06',
+  templateUrl: './U13-18-06.page.html',
+  styleUrls: ['./U13-18-06.page.scss'],
   encapsulation: ViewEncapsulation.None,
   standalone: true,
   imports: [MatchesComponent, TableComponent, NgIf, AsyncPipe],
 })
-export class U13Of1706Page implements OnInit {
+export class U13Of1806Page implements OnInit {
   private dataService = inject(DataService);
 
   protected campo1: any[] | undefined;
@@ -22,6 +22,8 @@ export class U13Of1706Page implements OnInit {
   protected grupo2: any[] = [];
   protected grupo3: any[] = [];
   protected grupo4: any[] = [];
+  protected oitavos1: any[] = [];
+  protected oitavos2: any[] = [];
   protected quartos1: any[] = [];
   protected quartos2: any[] = [];
   protected meias1: any[] = [];
@@ -61,14 +63,14 @@ export class U13Of1706Page implements OnInit {
 
     const final: any[] = data?.find((d) => d.name === 'Fase Final')?.data;
 
-    console.log(final);
-
-    // this.quartos1?.push(final[0], final[2]);
-    // this.quartos2?.push(final[1], final[3]);
-    // this.meias1?.push(final[4]);
-    // this.meias2?.push(final[5]);
-    // this.terceiros?.push(final[6]);
-    // this.final?.push(final[7]);
+    this.oitavos1 = [...final].splice(0, 4);
+    this.oitavos2 = [...final].splice(5, 4);
+    this.quartos1 = [...final].splice(10, 2);
+    this.quartos2 = [...final].splice(13, 2);
+    this.meias1 = [...final].splice(16, 1);
+    this.meias2 = [...final].splice(17, 1);
+    this.terceiros = [...final].splice(19, 1);
+    this.final = [...final].splice(20, 1);
 
     this.ready$.next(true);
   }

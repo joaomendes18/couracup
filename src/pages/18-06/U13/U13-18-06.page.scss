@@ -1,0 +1,86 @@
+page-U13-18-06 {
+  display: grid;
+  padding-top: 0;
+  gap: 1rem;
+  grid-template-areas:
+    "jogos jogos"
+    "campo1 campo2"
+    "oitavos1 oitavos2"
+    "quartos1 quartos2"
+    "meias1 meias2"
+    "terceiros terceiros"
+    "final final";
+  grid-auto-rows: max-content;
+  grid-template-columns: 1fr 1fr;
+  .jogos {
+    grid-area: jogos;
+  }
+  .campo1 {
+    grid-area: campo1;
+  }
+  .campo2 {
+    grid-area: campo2;
+  }
+  .quartos1 {
+    grid-area: quartos1;
+  }
+  .quartos2 {
+    grid-area: quartos2;
+  }
+  .meias1 {
+    grid-area: meias1;
+  }
+  .meias2 {
+    grid-area: meias2;
+  }
+  .terceiros {
+    grid-area: terceiros;
+  }
+  .final {
+    grid-area: final;
+  }
+  .u-title {
+    background-color: #fff;
+    color: #292f6c;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .u-group-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .u-group-title {
+      background-color: rgb(41 47 108 / 90%);
+      text-align: center;
+      padding: 0.2rem;
+      font-size: 1.1rem;
+    }
+  }
+  .u-group-title-final {
+    background-color: rgb(41 47 108 / 90%);
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+  }
+  .u-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .u-table-title {
+      background-color: rgb(255 222 61 / 90%);
+      color: #292f6c;
+      text-align: center;
+      padding: 0.2rem;
+      font-size: 1.1rem;
+    }
+  }
+  .u-group-title {
+    background-color: rgb(41 47 108 / 90%);
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 1.1rem;
+  }
+}

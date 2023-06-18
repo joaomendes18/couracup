@@ -1,0 +1,41 @@
+<ng-container *ngIf="ready$ | async"
+  ><div class="u-title jogos">JOGOS</div>
+  <div class="u-group-title campo1">CAMPO 1</div>
+  <div class="u-group-title campo2">CAMPO 2</div>
+  <app-matches
+    [data]="oitavos1"
+    [title]="'OITAVOS DE FINAL'"
+    class="oitavos1"
+  ></app-matches>
+  <app-matches
+    [data]="oitavos2"
+    [title]="'OITAVOS DE FINAL'"
+    class="oitavos2"
+  ></app-matches>
+  <app-matches
+    [data]="quartos1"
+    [title]="'QUARTOS DE FINAL'"
+    class="quartos1"
+  ></app-matches>
+  <app-matches
+    [data]="quartos2"
+    [title]="'QUARTOS DE FINAL'"
+    class="quartos2"
+  ></app-matches>
+  <app-matches
+    [data]="meias1"
+    [title]="'MEIAS FINAIS'"
+    class="meias1"
+  ></app-matches>
+  <app-matches
+    [data]="meias2"
+    [title]="'MEIAS FINAIS'"
+    class="meias2"
+  ></app-matches>
+  <app-matches
+    [data]="terceiros"
+    [title]="'TERCEIROS/QUARTOS'"
+    class="terceiros"
+  ></app-matches>
+  <app-matches [data]="final" [title]="'FINAL'" class="final"></app-matches>
+</ng-container>
