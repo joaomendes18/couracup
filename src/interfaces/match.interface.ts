@@ -4,4 +4,5 @@ export interface IMatch {
   homeGoals?: number;
   awayGoals?: number;
   time?: string;
+  name?: string;
 }

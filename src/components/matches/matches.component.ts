@@ -39,6 +39,7 @@ export class MatchesComponent implements OnChanges {
           homeGoals: element['D'],
           away: element['G'],
           awayGoals: element['F'],
+          name: element['H'],
         });
       }
     });

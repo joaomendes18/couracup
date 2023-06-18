@@ -11,9 +11,9 @@
       <span *ngIf="value.homeGoals && value.awayGoals"
         >{{ value.homeGoals }} x {{ value.awayGoals }}</span
       >
-      <span *ngIf="!(value.homeGoals && value.awayGoals)">{{
-        value.time
-      }}</span>
+      <span *ngIf="!(value.homeGoals && value.awayGoals)"
+        >{{ value.time }} {{ value.name }}</span
+      >
     </div>
     <div class="cell away">
       <span>{{ value.away }}</span>
