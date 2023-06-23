@@ -1,0 +1,60 @@
+page-U15-06 {
+  display: grid;
+  padding-top: 0;
+  gap: 1rem;
+  grid-template-areas:
+    "jogos jogos"
+    "sabado domingo"
+    "classificacao-title classificacao-title"
+    "classificacao classificacao";
+  grid-auto-rows: max-content;
+  grid-template-columns: 1fr 1fr;
+  .jogos {
+    grid-area: jogos;
+  }
+  .sabado {
+    grid-area: sabado;
+  }
+  .domingo {
+    grid-area: domingo;
+  }
+  .classificacao-title {
+    grid-area: classificacao-title;
+  }
+  .classificacao {
+    grid-area: classificacao;
+  }
+
+  .u-title {
+    background-color: #fff;
+    color: #292f6c;
+    text-align: center;
+    padding: 0.2rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .u-group-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .u-group-title {
+      background-color: rgb(41 47 108 / 90%);
+      text-align: center;
+      padding: 0.2rem;
+      font-size: 1.1rem;
+    }
+  }
+  .u-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    .u-table-title {
+      background-color: rgb(255 222 61 / 90%);
+      color: #292f6c;
+      text-align: center;
+      padding: 0.2rem;
+      font-size: 1.1rem;
+    }
+  }
+}

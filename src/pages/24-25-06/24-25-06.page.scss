@@ -1,0 +1,33 @@
+page-24-25-06 {
+  display: grid;
+  flex: 1;
+  padding: 1rem;
+  padding-top: 0;
+  gap: 3rem;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "u11 u13"
+    "page-u11 page-u13";
+  grid-auto-rows: max-content;
+  row-gap: 1rem;
+}
+.u11 {
+  grid-area: u11;
+}
+.page-u11 {
+  grid-area: page-u11;
+}
+.u13 {
+  grid-area: u13;
+}
+.page-u13 {
+  grid-area: page-u13;
+}
+.u-title {
+  background-color: rgb(41 47 108 / 90%);
+  text-align: center;
+  padding: 0.2rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+}

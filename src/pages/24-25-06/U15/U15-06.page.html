@@ -1,0 +1,13 @@
+<ng-container *ngIf="ready$ | async"
+  ><div class="u-title jogos">JOGOS</div>
+  <div class="u-group-wrapper sabado">
+    <div class="u-group-title">24 de JUNHO</div>
+    <app-matches [data]="sabado"></app-matches>
+  </div>
+  <div class="u-group-wrapper domingo">
+    <div class="u-group-title">25 de JUNHO</div>
+    <app-matches [data]="domingo"></app-matches>
+  </div>
+  <div class="u-title classificacao-title">CLASSIFICAÇÃO</div>
+  <app-table class="classificacao" [data]="grupo" />
+</ng-container>

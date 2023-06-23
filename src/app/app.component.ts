@@ -9,10 +9,10 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   private router = inject(Router);
-  title: string = '18 de Junho';
+  title: string = '24 e 25 de Junho';
 
   async ngOnInit() {
-    this.router.navigateByUrl(`1806`);
+    this.router.navigateByUrl(`242506`);
   }
 
   goToHome() {
