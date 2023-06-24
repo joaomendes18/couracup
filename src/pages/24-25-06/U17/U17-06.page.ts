@@ -27,7 +27,7 @@ export class U1706Page implements OnInit {
 
     setInterval(async () => {
       this.readData();
-    }, 60000);
+    }, 30000);
   }
 
   private async readData() {
